@@ -4,11 +4,11 @@
 		<title>Devine Designs By Abigail</title>
 		<link rel="stylesheet" href="static/css/bootstrap.css"/>
   		<link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet'  type='text/css'>
-  		<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'  type='text/css'>
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="shortcut icon" type="image/x-icon" href="http://fontawesome.io/icon/scissors/" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 			.btn {
@@ -72,19 +72,16 @@
 				color: #fff;
 			}*/
 
-			.navbar-default .navbar-nav > li > a:hover  {
-				color: #fff;
+			.navbar-default .navbar-nav > li > a:hover, .active  {
+				color: #000;
 				text-decoration: underline;
 			}
 
 			body {
 				font-family: 'Old Standard TT', sans-serif;
 				text-align: center;
-				background-image: url('static/images/IMG_2593copy.jpg');
-				background-repeat: no-repeat;
-				background-size: cover;
-				overflow-y: hidden;
-				color: #fff;
+				color: #000;
+				overflow-x: hidden;
 
 			}
 			
@@ -105,6 +102,15 @@
 				z-index: -1;
 				width: 100%;
 				height: 100%;
+			}
+
+			h1 {
+				font-size: 400%;
+			}
+
+			li {
+				list-style: none;
+				text-align: left;
 			}
 
 			@media screen and (max-width : 600px) {
@@ -128,15 +134,15 @@
 			 }
 
 			.navbar-default .navbar-brand {
-				color:#fff;
+				color:#000;
 			}
 
 			.navbar-default .navbar-nav > li > a {
-				color:#fff;
+				color:#000;
 			}
 			.navbar-default .navbar-collapse,
 			.navbar-default .navbar-form {
-				border-color: #fff;
+				border-color: #000;
 			}
 
 			.navbar-default .navbar-toggle{
@@ -153,11 +159,19 @@
 			.navbar-default .navbar-toggle .icon-bar {
 				background-color: #000;
 			}
+			.footer{
+				position: relative;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: #5e5e5e;
+				padding-top: 2vh;
+			}
 
 		</style>
 	</head>
 	<body>
-		<figure class = "tint">	
+		<!--figure class = "tint"-->	
 		<!-- Section 1: Photo and Intro Text -->
 		<div>
 			<!-- Nav Bar  -->
@@ -176,7 +190,7 @@
 			      <ul class="nav navbar-nav navbar-right">
 			        <li><a href="about.html"><h4>About Us</h4></a></li>
 			        <li><a href="fabrics.html"><h4>Our Fabrics</h4></a></li>
-			        <li><a href="pricing.html"><h4>Pricing</h4></a></li>
+			        <li><a class="active" href="pricing.html"><h4>Pricing</h4></a></li>
 			        <li><a href="whats_new.html"><h4>What's New</h4></a></li>
 			        <li><a href="contact.html"><h4>Contact Us</h4></a></li>
 			      </ul>
@@ -185,10 +199,46 @@
 			</nav>
 			<!-- Nav Bar -->
 			<!--<h1 style = "text-align: center">Welcome to Devine Designs By Abigail</h1> -->	
-			<h4 style="margin-top: 40vh;">
-				<i>Announcement: Sale Starting January 3rd Until the 15th</i><br/><br/>
-				<a class="btn btn-primary" href="about.html" role="button">Enter Site</a>
-			</h4>
+		</div>
+		<div class="row" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url('static/images/IMG_2593copy.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 250%;">
+	  			<div class="col-lg-12">
+	  					<h1 style="margin-top: 15vh; margin-bottom: 15vh; color: #fff;"><b>Pricing</b></h1>
+	  			</div>
+		</div>
+		<div class = "container" style="margin-top: 2%;">
+			<h3>Dresses</h3>
+			<p> Regular Dress - Starting at $100<br/> Long Gown - Starting at $100<br/> Skirt & Blouse - starting at $100 <br/>
+			Prom Dress - Starting at $300 <br/> Short Dress - Starting at $80 <br/> Jumpsuit - Starting at $100 <br/> Bridal Parties - Starting at $150 per dress </p>
+			<h3>Alterations</h3>
+			<p> Pants Hem - $18 <br/> Pants Cuff - $25 <br/> Dress Opening and Closing - Starting at $40</p>
+			<h3>Fabrics</h3>
+			<p> Print - Starting at $25/6yds. <br/> Lace - Startingat $25/yd. <br/> Chiffon - starting at $5/yd. <br/>
+			Taffeta - $5/yd.</p>
+
+		</div>
+		<!-- Footer -->
+		<div class="footer">
+			<div class = "container">
+				<div class = "row">
+					<div class = "col-sm-2">
+						<ul>
+							<li><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</li>
+							<li><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</li>
+							<li><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</li>
+						</ul>
+					</div>
+					<div class = "col-sm-2">
+						<ul>
+							<li><i class="fa fa-id-badge" aria-hidden="true"></i> Brand</li>
+							<li><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us</li>
+							<li><i class="fa fa-calendar" aria-hidden="true"></i> Come See Us</li>
+						</ul>
+					</div>
+					<div class = "col-sm-2"></div>
+				</div>
+			</div>
 		</div>
 		<!-- button -->
 		<!--div id= "button" class="container"-->
@@ -231,28 +281,6 @@
 
 
 		<script src="/static/js/bootstrap.js"/>
-		</figure>
+		<!--/figure-->
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-	        <!--<li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-	          <ul class="dropdown-menu">
-	            <li><a href="#">Action</a></li>
-	            <li><a href="#">Another action</a></li>
-	            <li><a href="#">Something else here</a></li>
-	            <li role="separator" class="divider"></li>
-	            <li><a href="#">Separated link</a></li>
-	          </ul>
-	        </li> -->

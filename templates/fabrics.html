@@ -4,11 +4,11 @@
 		<title>Devine Designs By Abigail</title>
 		<link rel="stylesheet" href="static/css/bootstrap.css"/>
   		<link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet'  type='text/css'>
-  		<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'  type='text/css'>
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="shortcut icon" type="image/x-icon" href="http://fontawesome.io/icon/scissors/" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 			.btn {
@@ -72,19 +72,15 @@
 				color: #fff;
 			}*/
 
-			.navbar-default .navbar-nav > li > a:hover  {
-				color: #fff;
+			.navbar-default .navbar-nav > li > a:hover, .active  {
+				color: #000;
 				text-decoration: underline;
 			}
 
 			body {
 				font-family: 'Old Standard TT', sans-serif;
 				text-align: center;
-				background-image: url('static/images/IMG_2593copy.jpg');
-				background-repeat: no-repeat;
-				background-size: cover;
-				overflow-y: hidden;
-				color: #fff;
+				color: #000;
 
 			}
 			
@@ -107,6 +103,14 @@
 				height: 100%;
 			}
 
+			h1 {
+				font-size: 400%;
+			}
+
+			li {
+				list-style: none;
+				text-align: left;
+			}
 			@media screen and (max-width : 600px) {
 				.abs{
 					position: relative;
@@ -128,15 +132,15 @@
 			 }
 
 			.navbar-default .navbar-brand {
-				color:#fff;
+				color:#000;
 			}
 
 			.navbar-default .navbar-nav > li > a {
-				color:#fff;
+				color:#000;
 			}
 			.navbar-default .navbar-collapse,
 			.navbar-default .navbar-form {
-				border-color: #fff;
+				border-color: #000;
 			}
 
 			.navbar-default .navbar-toggle{
@@ -154,10 +158,18 @@
 				background-color: #000;
 			}
 
+			.footer{
+				position: absolute;
+				right: 0;
+				left: 0;
+				background-color: #5e5e5e;
+				padding-top: 2vh;
+			}
+
 		</style>
 	</head>
 	<body>
-		<figure class = "tint">	
+		<!--figure class = "tint"-->	
 		<!-- Section 1: Photo and Intro Text -->
 		<div>
 			<!-- Nav Bar  -->
@@ -175,7 +187,7 @@
 			    <div class="collapse navbar-collapse" id="myNavbar">
 			      <ul class="nav navbar-nav navbar-right">
 			        <li><a href="about.html"><h4>About Us</h4></a></li>
-			        <li><a href="fabrics.html"><h4>Our Fabrics</h4></a></li>
+			        <li><a class="active" href="fabrics.html"><h4>Our Fabrics</h4></a></li>
 			        <li><a href="pricing.html"><h4>Pricing</h4></a></li>
 			        <li><a href="whats_new.html"><h4>What's New</h4></a></li>
 			        <li><a href="contact.html"><h4>Contact Us</h4></a></li>
@@ -185,11 +197,54 @@
 			</nav>
 			<!-- Nav Bar -->
 			<!--<h1 style = "text-align: center">Welcome to Devine Designs By Abigail</h1> -->	
-			<h4 style="margin-top: 40vh;">
-				<i>Announcement: Sale Starting January 3rd Until the 15th</i><br/><br/>
-				<a class="btn btn-primary" href="about.html" role="button">Enter Site</a>
-			</h4>
 		</div>
+			<div class="row" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url('static/images/IMG_0004.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 250%;">
+	  			<div class="col-lg-12">
+	  					<h1 style="margin-top: 15vh; margin-bottom: 15vh; color: #fff;"><b>Our Fabrics</b></h1>
+	  			</div>
+			</div>
+			<div class = "container" style="margin-top: 2%;">
+			<div class="row">
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+			<hr style="width: 50%; border-width: 2px"/>
+			</div>
+			<div class="row" style="height:40vh;"> 
+	  			<div class="col-md-4"></div>
+	  			<div class="col-md-4">
+	  				<img src = "static/images/IMG_0004.jpg" height="275vh" width="80%" style="margin-bottom: 3vh;"/>
+	  			</div>
+	  			<div class="col-md-4"></div>
+			</div>
+			<hr style="width: 50%; border-width: 2px"/>
+			<div class = "row" style="margin-top: 2%;">
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+			</div>
+			</div>
+
+			<!-- Footer -->
+			<div class="footer">
+				<div class = "container">
+					<div class = "row">
+						<div class = "col-sm-2">
+							<ul>
+								<li><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</li>
+								<li><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</li>
+								<li><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</li>
+							</ul>
+						</div>
+						<div class = "col-sm-2">
+							<ul>
+								<li><i class="fa fa-id-badge" aria-hidden="true"></i> Brand</li>
+								<li><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us</li>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> Come See Us</li>
+							</ul>
+						</div>
+						<div class = "col-sm-2"></div>
+					</div>
+				</div>
+			</div>
 		<!-- button -->
 		<!--div id= "button" class="container"-->
 		<!--/div-->
@@ -231,28 +286,6 @@
 
 
 		<script src="/static/js/bootstrap.js"/>
-		</figure>
+		<!--/figure-->
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-	        <!--<li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-	          <ul class="dropdown-menu">
-	            <li><a href="#">Action</a></li>
-	            <li><a href="#">Another action</a></li>
-	            <li><a href="#">Something else here</a></li>
-	            <li role="separator" class="divider"></li>
-	            <li><a href="#">Separated link</a></li>
-	          </ul>
-	        </li> -->
