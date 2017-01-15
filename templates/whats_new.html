@@ -46,7 +46,8 @@
 			}
 
 			input {
-				border-radius: 0px;	
+				border-radius: 0px;
+				width: 100%;	
 			}
 
 			.jumbotron {
@@ -171,6 +172,10 @@
 				padding-top: 2vh;
 			}
 
+			.flash{
+				background-color: #FBB0B0;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -195,6 +200,7 @@
 			        <li><a href="fabrics.html"><h4>Our Fabrics</h4></a></li>
 			        <li><a href="pricing.html"><h4>Pricing</h4></a></li>
 			        <li><a href="whats_new.html" class="active"><h4>What's New</h4></a></li>
+			        <li><a href="gallery.html"><h4>Gallery</h4></a></li>
 			        <li><a href="contact.html"><h4>Contact Us</h4></a></li>
 			      </ul>
 			      </div>
@@ -211,14 +217,44 @@
 	  			</div>
 		</div>
 		<div class = "container" style="margin-bottom: 2%">
-			<h2>Strting in March: Sewing Classes with Ms. Abigail!</h2>
+			<h2>Starting in March: Sewing Classes with Ms. Abigail!</h2>
 			<p>Statring in March this year, Ms. Abigail will be holding sewing classes for anyone that wants to learn.</p>
-			<p>Classes will be held: <br/> <i>Mondays: 6:00pm-7:30pm</i> <br/> and <br/> <i>Saturdays: 4:00pm to 5:30 pm</i> <br/><u><strong><h4>From March 6th - April 15th</h4></strong></u></p>
-			<input type="hidden" name="cmd" value="_s-xclick">
-			<input type="hidden" name="hosted_button_id" value="XSED7GH9RG2J6">
-			<input class="btn btn-primary" type="submit" value="Sign Up Here" name="submit" title="PayPal - The safer, easier way to pay online!" class="paypal_btn">
-			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-			<!--<a class="btn btn-primary" href="signup.html" role="button">Sign Up Here</a>-->
+			<p>Classes will be held: <br/> <i>Mondays: 5:00pm-7:00pm For Beginners</i> <br/> and <br/> <i>Saturdays: 5:00pm to 7:00 pm For Those With Experience</i> <br/><u><strong><h4>From March 6th - April 22nd</h4></strong></u></p>
+			<div class = "row">
+				<div class = "col-lg-1 col-md-1 col-sm-1"></div>
+				<div class = "col-lg-10 col-md-10 col-sm-10">
+					{% block content %}
+					  {% for message in get_flashed_messages() %}
+  						<div class = "flash">{{ message }}</div>
+					  {% endfor %}
+					  <form action="/whats_new.html" method="post" target="_top" >
+					  <div class = "row">
+					  <div class = "col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 2%;">
+					    {{ form.hidden_tag() }}
+					    {{ form.first_name.label }}
+					    {{ form.first_name }}
+					  </div>
+					  <div class = "col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 2%;">
+					    {{ form.last_name.label }}
+					    {{ form.last_name }}
+					  </div>
+					  <div class="col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 2%;" >
+					    {{ form.email.label }}
+					    {{ form.email }}
+					  </div>  
+					  <div class="col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 2%;">
+					  	{{ form.experience.label }}
+					    {{ form.experience }}
+					  </div>
+					  </div>
+					  <div class = "row" style="margin-bottom: 3%; margin-left: 0.05%">
+							<input class="btn btn-primary" type="submit" value="Sign Up" name="submit" class="paypal_btn">
+					  </div>
+					 </form>
+		   			{% endblock %}
+				</div>
+				<div class = "col-lg-1 col-md-1 col-sm-1"></div>
+			</div>
 		</div>
 		<!-- Footer -->
 		<div class="footer">

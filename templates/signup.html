@@ -52,9 +52,9 @@
 
 			input, textarea  {
 				display: inline-block;
-				float: left;
+				text-align: center;
 				margin-right: -1.5%;
-				width: 100%;
+				width: 20%;
 
 			}
 
@@ -156,7 +156,8 @@
 			}
 
 			form {
-				float: left;
+				/*float: left;*/
+				text-align: center;
 			}
 
 			hr {
@@ -211,7 +212,7 @@
 				background-color: #000;
 			}
 			.footer{
-				position: relative;
+				position: absolute;
 				right: 0;
 				bottom: 0;
 				left: 0;
@@ -242,7 +243,8 @@
 			        <li><a href="about.html"><h4>About Us</h4></a></li>
 			        <li><a href="fabrics.html"><h4>Our Fabrics</h4></a></li>
 			        <li><a href="pricing.html"><h4>Pricing</h4></a></li>
-			        <li><a href="whats_new.html" class="active"><h4>What's New</h4></a></li>
+			        <li><a href="whats_new.html"><h4>What's New</h4></a></li>
+			        <li><a href="gallery.html"><h4>Gallery</h4></a></li>
 			        <li><a href="contact.html"><h4>Contact Us</h4></a></li>
 			      </ul>
 			      </div>
@@ -255,7 +257,7 @@
 				background-repeat: no-repeat;
 				background-size: 100% 250%;">
 	  			<div class="col-lg-12">
-	  					<h1 style="margin-top: 15vh; margin-bottom: 15vh; color: #fff;"><b>What's New</b></h1>
+	  					<h1 style="margin-top: 15vh; margin-bottom: 15vh; color: #fff;"><b>Sign Up</b></h1>
 	  			</div>
 		</div>
 		<div class = "container" style="margin-top: 2%;">
@@ -263,32 +265,28 @@
 				<div class = "col-lg-1 col-md-1 col-sm-1"></div>
 				<div class = "col-lg-10 col-md-10 col-sm-10">
 					{% block content %}
-					  <!--<form action="{{ url_for('contact') }}" method=post>-->
 					  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-					  <div class = "row">
-					  <div class = "col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 2%;">
-					    {{ form.hidden_tag() }}
-					    {{ form.first_name.label }}
-					    {{ form.first_name }}
-					  </div>
-					  <div class = "col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 2%;">
-					    {{ form.last_name.label }}
-					    {{ form.last_name }}
-					  </div>
-					  <div class="col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 2%;" >
-					    {{ form.email.label }}
-					    {{ form.email }}
-					  </div>  
+					  <!--div class = "row">
 					  <div class="col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 2%;">
-					  	{{ form.experience.label }}
-					    {{ form.experience }}
+					  	{{ form.hidden_tag() }}
+					  	{{ form.class_lvl.label }}
+					    {{ form.class_lvl }}
 					  </div>
-					  </div>
-					  <div class = "row" style="margin-bottom: 3%; margin-left: 0.05%">
-					    	<input type="hidden" name="cmd" value="_s-xclick">
-							<input type="hidden" name="hosted_button_id" value="XSED7GH9RG2J6">
-							<input class="btn btn-primary" type="submit" value="Sign Up Here" name="submit" title="PayPal - The safer, easier way to pay online!" class="paypal_btn">
-							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					  </div -->
+					  <div class = "row" style="margin-bottom: 3%; margin-left: 0.05%; margin-top: 5%;">
+					  {% for message in get_flashed_messages() %}
+  						<p>{{ message }}</p>
+					  {% endfor %}
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="XSED7GH9RG2J6">
+						<input type="hidden" name="on0" value="Class Level">Class Level:  <select name="os0">
+							<option value="Beginner Class">Beginner Class - $640.00 USD</option>
+							<option value="Intermediate Class">Intermediate Class - $800.00 USD</option>
+						</select>
+						<input type="hidden" name="currency_code" value="USD"><br/><br/>
+						<input class="btn btn-primary" type="submit" value="Sign Up" name="submit" class="paypal_btn" alt="PayPal - The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
 					  </div>
 					  </form>
 					{% endblock %}
