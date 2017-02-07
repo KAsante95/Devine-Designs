@@ -301,7 +301,7 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:EikzMSBSYW5kb2xwaCBSZ
 					  {% for message in get_flashed_messages() %}
   						<div class = "flash">{{ message }}</div>
 					  {% endfor %}
-					  <form action="{{ url_for('contact') }}" method=post>
+					  <form action="/contact.html" method=post>
 					  <div class = "row">
 					  <div class = "col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 2%;">
 					    {{ form.hidden_tag() }}
