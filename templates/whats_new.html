@@ -17,7 +17,7 @@
 				border-width: 2px;
 			}
 
-			.btn-primary {
+			.btn-primary, #submit {
 				border-color: #000;
 				background-color: #fff;
 				font-size: 115%;
@@ -25,12 +25,12 @@
 				color: #000;
 			}
 
-			.btn-primary:hover, .btn-primary.active, .btn-primary:focus {
+			.btn-primary:hover, .btn-primary.active, .btn-primary:focus,
+			#submit:hover, #submit:active, #submit:focus {
 				border-color: #000;
 				background-color: #000;
 				color: #fff;
 			}
-
 			.btn-primary:active:hover,
 			.btn-primary.active:hover,
 			.open > .dropdown-toggle.btn-primary:hover,
@@ -248,7 +248,8 @@
 					  </div>
 					  </div>
 					  <div class = "row" style="margin-bottom: 3%; margin-left: 0.05%">
-							<input class="btn btn-primary" type="submit" value="Sign Up" name="submit" class="paypal_btn">
+							<!--input class="btn btn-primary" type="submit" value="Sign Up" name="submit" class="paypal_btn"-->
+							{{ form.submit }}
 					  </div>
 					 </form>
 		   			{% endblock %}

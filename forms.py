@@ -12,14 +12,14 @@ class ContactForm(FlaskForm):
   attachment = FileField("Attachment(s): ")
   submit = SubmitField("Send")
 
-class InfoForm(Form):
+class InfoForm(FlaskForm):
   first_name = TextField("First Name: ", [validators.DataRequired()])
   last_name = TextField("Last Name: ", [validators.DataRequired()])
   email = TextField("Email: ", [validators.DataRequired(), validators.Email()])
-  message = TextAreaField("Message: ", [validators.DataRequired()])
   experience = SelectField("Experience: ", choices = [("A lot of Experience", "A Lot of Experience"), ("Some Experince", "Some Experince"), ("Little Experience", "Little Experience"), ("No Experience", "No Experience")])
+  submit = SubmitField("Sign Up")
 
-class SignupForm(Form):
+class SignupForm(FlaskForm):
   message = TextAreaField("Message: ", [validators.DataRequired()])
   class_lvl = SelectField("Class Selection: ", choices = [("beginner", "Beginner Classes - $640"),("intermediate", "Intermediate Classes - $800")])
 
