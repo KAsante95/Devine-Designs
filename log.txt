@@ -1,0 +1,5 @@
+"137.54.34.33 - - [27/Jan/2017:18:42:45] "GET /signup.html HTTP/1.1" 200 10601 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36"
+"137.54.34.33 - - [27/Jan/2017:18:42:45] "GET /static/css/bootstrap.css.map HTTP/1.1" 200 389287 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36"
+"137.54.34.33 - - [27/Jan/2017:18:42:52] "GET /whats_new.html HTTP/1.1" 200 9967 "http://ec2-52-207-235-214.compute-1.amazonaws.com:7000/signup.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36"
+"137.54.34.33 - - [27/Jan/2017:18:43:00] "POST /signup.html HTTP/1.1" 500 - "-" "-"
+"137.54.34.33 - - [27/Jan/2017:18:43:00] "GET /favicon.ico HTTP/1.1" 404 233 "http://ec2-52-207-235-214.compute-1.amazonaws.com:7000/signup.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36"

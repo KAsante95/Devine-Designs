@@ -1,6 +1,6 @@
 from flask import Flask, render_template, flash, request, redirect, url_for, send_from_directory
 from forms import ContactForm, SignupForm, InfoForm
-from flask.ext.mail import Message, Mail
+from flask_mail import Message, Mail
 import os
 from werkzeug import secure_filename
 from flask_wtf import FlaskForm
@@ -132,4 +132,4 @@ IMG_0044.jpeg"
 
 
 if __name__ == "__main__":
-	app.run() 
+	app.run(port=6000) 
