@@ -6,6 +6,9 @@ from werkzeug import secure_filename
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileRequired
 import shutil
+import requests
+import json
+from collections import OrderedDict
 
 mail = Mail()
 
@@ -103,33 +106,24 @@ def contact():
 
 @app.route("/gallery.html")
 def gallery():
-	img_files = "IMG_0001.JPG           IMG_0002.JPG \
-IMG_0003.JPG		IMG_0046.jpeg \
-IMG_0047.JPG        IMG_0053.jpg       IMG_0029.JPG \
-IMG_0025.jpg		IMG_0048.JPG \
-IMG_00042.JPG		IMG_0026.jpeg \
-IMG_0051.jpg		IMG_0050.JPG        IMG_0005.JPG \
-IMG_00062.JPG		IMG_0045.jpeg		IMG_0052.JPG"
-	img = "IMG_0054.JPG        IMG_0008.PNG        IMG_0024.jpeg \
-	IMG_0009.jpg    IMG_0017.JPG        IMG_0016.JPG        IMG_0036.JPG       IMG_0014.JPG"
-	im = "IMG_0013.jpg		IMG_0011.JPG \
-IMG_0038.JPG  IMG_00072.JPG \
-IMG_0032.jpeg \
-IMG_0039.JPG       IMG_0041.JPG \
-IMG_0034.JPG		 \
-IMG_0019.jpeg	   IMG_0020.jpeg \
-IMG_0040.JPG \
-IMG_0037.JPG"
-	i = "IMG_0018.jpeg      IMG_2622.JPG    IMG_0015.JPG		IMG_0012.JPG		 \
-IMG_0033.jpeg	   IMG_0042.JPG \
-IMG_0044.jpeg"
-	images = img_files.split()
-	imgs = img.split()
-	ims = im.split()
-	igs = i.split()
-	return render_template("gallery.html", images=images, imgs=imgs, ims = ims, igs = igs)
+	images = {}
+	links = []
+
+	r = requests.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=2290774988.d227555.44c8e8c438634ddbb00531841909375a')
+	json = r.json()
+	i = 0
+	while i < len(json["data"]):
+		images[json["data"][i]["images"]["standard_resolution"]["url"]] = json["data"][i]["link"]
+		links.append(json["data"][i]["link"])
+		i += 1
+		images = OrderedDict(sorted(images.items(), key=lambda t: t[-1], reverse=True))
+
+
+
+
+	return render_template("gallery.html", images=images)
 
 
 
 if __name__ == "__main__":
-	app.run(port=6000) 
+	app.run() 
