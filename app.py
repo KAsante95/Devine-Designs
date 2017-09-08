@@ -54,7 +54,7 @@ def wnew():
 			msg = Message("Interest in Sewing Classes", sender=form.email.data, recipients=['kasante.asante@gmail.com'])
 			msg.body = """From: %s %s <%s> %s""" % (form.first_name.data, form.last_name.data, form.email.data, form.experience.data)
 			mail.send(msg)
-			return redirect("/signup.html", form = SignupForm())
+			return redirect("/signup.html")
  
 	elif request.method == "GET":
 		return render_template("/whats_new.html", form=form)
