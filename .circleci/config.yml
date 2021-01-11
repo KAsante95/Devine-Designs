@@ -27,6 +27,7 @@ jobs:
             sudo npm i -g serverless
             npm install
             npm install serverless-wsgi serverless-python-requirements --save-dev
+            sls config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
       - save_cache:
           paths:
             - node_modules
@@ -34,7 +35,6 @@ jobs:
       - run:
           name: Deploy application
           command: |
-            serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
             sls deploy -v
           
 workflows:
