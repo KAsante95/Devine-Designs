@@ -26,6 +26,7 @@ jobs:
           command: | 
             sudo npm i -g serverless
             npm install
+            npm install serverless-wsgi serverless-python-requirements --save-dev
       - save_cache:
           paths:
             - node_modules
