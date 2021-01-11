@@ -25,9 +25,9 @@ jobs:
           name: Install Serverless CLI and dependencies
           command: | 
             echo $AWS_ACCESS_KEY_ID
-            sudo npm i -g serverless
-            npm install
-            npm install serverless-wsgi serverless-python-requirements --save-dev
+            # sudo npm i -g serverless
+            # npm install
+            # npm install serverless-wsgi serverless-python-requirements --save-dev
       - save_cache:
           paths:
             - node_modules
