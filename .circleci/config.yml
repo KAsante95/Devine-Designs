@@ -1,4 +1,5 @@
 version: 2
+
 jobs:
   deploy:
     working_dir: ~/python-ci
@@ -32,3 +33,9 @@ jobs:
       - run:
           name: Deploy application
           command: sls deploy -v
+          
+workflows:
+  version: 2
+  main:
+    jobs:
+      - deploy
