@@ -28,7 +28,6 @@ jobs:
             npm install
             npm install serverless-wsgi serverless-python-requirements --save-dev
             echo $AWS_ACCESS_KEY_ID
-            sls config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
       - save_cache:
           paths:
             - node_modules
