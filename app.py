@@ -19,7 +19,7 @@ app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
 app.config["MAIL_USERNAME"] = 'kasante.asante@gmail.com'
-app.config["MAIL_PASSWORD"] = '120295ka'
+app.config["MAIL_PASSWORD"] = 'blah'
 app.config["UPLOAD_FOLDER"] = 'uploads/'
 app.config["ALLOWED_EXTENSIONS"] = set(['txt', 'docx', 'pdf', 'jpg', 'png'])
 
@@ -125,5 +125,5 @@ def gallery():
 
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80)
+# if __name__ == "__main__":
+#     app.run(host='0.0.0.0', port=80)
